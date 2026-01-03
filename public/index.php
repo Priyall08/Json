@@ -1,0 +1,28 @@
+<?php
+require_once "../app/controllers/AuthController.php";
+
+$action = $_GET['action'] ?? '';
+
+$auth = new AuthController();
+
+switch ($action) {
+    case 'loginForm':
+        $auth->showLogin();
+        break;
+
+    case 'signupForm':
+        $auth->showSignup();
+        break;
+
+    case 'signup':
+        $auth->signup();
+        break;
+
+    case 'login':
+        $auth->login();
+        break;
+
+    default:
+        echo "<a href='?action=loginForm'>Login</a> | 
+              <a href='?action=signupForm'>Signup</a>";
+}
