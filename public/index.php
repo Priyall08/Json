@@ -1,5 +1,7 @@
 <?php
 require_once "../app/controllers/AuthController.php";
+require_once(__DIR__ . '/../config/config.php');
+
 
 $action = $_GET['action'] ?? '';
 
