@@ -20,8 +20,3 @@ class User extends Model {
         return $result->fetch_assoc();
     }
 }
-
-
-
-
-http://localhost/json-pratical/public/index.php?action=loginForm
