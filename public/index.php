@@ -1,6 +1,14 @@
 <?php
-require_once(__DIR__ . '/../app/controllers/AuthController.php');
-require_once(__DIR__ . '/../config/config.php');
+
+
+if (file_exists(__DIR__ . '/../app/controllers/AuthController.php')) {
+    require_once(__DIR__ . '/../app/controllers/AuthController.php');
+    require_once(__DIR__ . '/../config/config.php');
+} else {
+    require_once(__DIR__ . '/app/controllers/AuthController.php');
+    require_once(__DIR__ . '/config/config.php');
+}
+
 
 
 $action = $_GET['action'] ?? '';
